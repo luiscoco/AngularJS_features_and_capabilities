@@ -356,8 +356,7 @@ app.controller('myController', function($scope) {
 
 The $q service helps you run functions asynchronously and use their return values when they are done processing
 
-javascript
-Copy code
+```javascript
 // Define a service using $q
 app.service('AsyncService', function($q) {
   this.fetchData = function() {
@@ -368,8 +367,9 @@ app.service('AsyncService', function($q) {
     return deferred.promise;
   };
 });
-javascript
-Copy code
+```
+
+```javascript
 // Use the service in a controller
 app.controller('AsyncController', function($scope, AsyncService) {
   $scope.getData = function() {
@@ -378,18 +378,21 @@ app.controller('AsyncController', function($scope, AsyncService) {
     });
   };
 });
-html
-Copy code
+```
+
+```html
 <!-- HTML to use the controller -->
 <div ng-app="myApp" ng-controller="AsyncController">
   <button ng-click="getData()">Get Data</button>
   <p>{{ data }}</p>
 </div>
-5. Form Validation
-AngularJS provides robust form validation mechanisms to handle user input and display validation messages.
+```
 
-html
-Copy code
+## 16. Form Validation
+
+AngularJS provides robust form validation mechanisms to handle user input and display validation messages
+
+```html
 <!-- Form validation example -->
 <div ng-app="myApp" ng-controller="myController">
   <form name="userForm">
@@ -406,11 +409,15 @@ Copy code
     <button ng-disabled="userForm.$invalid">Submit</button>
   </form>
 </div>
-6. Dependency Injection
-AngularJS uses dependency injection (DI) to achieve Inversion of Control. It allows you to inject dependencies directly into your controllers, services, and other components.
+```
 
-javascript
-Copy code
+## 17. Dependency Injection
+
+AngularJS uses dependency injection (DI) to achieve Inversion of Control
+
+It allows you to inject dependencies directly into your controllers, services, and other components
+
+```javascript
 // Define a service
 app.service('GreetingService', function() {
   this.greet = function(name) {
@@ -425,19 +432,22 @@ app.controller('GreetingController', function($scope, GreetingService) {
     $scope.message = GreetingService.greet($scope.name);
   };
 });
-html
-Copy code
+```
+
+```html
 <!-- HTML to use the controller -->
 <div ng-app="myApp" ng-controller="GreetingController">
   <input type="text" ng-model="name">
   <button ng-click="greet()">Greet</button>
   <p>{{ message }}</p>
 </div>
-7. Custom Events
-AngularJS allows communication between controllers through custom events using $emit, $broadcast, and $on.
+```
 
-javascript
-Copy code
+## 18. Custom Events
+
+AngularJS allows communication between controllers through custom events using $emit, $broadcast, and $on
+
+```javascript
 // Define a controller to emit an event
 app.controller('ParentController', function($scope) {
   $scope.broadcastEvent = function() {
@@ -451,8 +461,9 @@ app.controller('ChildController', function($scope) {
     $scope.receivedMessage = message;
   });
 });
-html
-Copy code
+```
+
+```html
 <!-- HTML to use the controllers -->
 <div ng-app="myApp" ng-controller="ParentController">
   <button ng-click="broadcastEvent()">Broadcast Event</button>
@@ -460,8 +471,11 @@ Copy code
     <p>{{ receivedMessage }}</p>
   </div>
 </div>
-8. Routing with Parameters
-AngularJS routing can handle parameters, making it possible to create dynamic views.
+```
+
+## 19. Routing with Parameters
+
+AngularJS routing can handle parameters, making it possible to create dynamic views
 
 html
 Copy code
