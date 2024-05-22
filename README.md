@@ -24,7 +24,15 @@ Summary:
 
 11. Custom Directives
 
-12. 
+12. Custom Services
+
+13. Custom Filters
+
+14. Custom Directives with Isolated Scope
+
+15. Promises with $q Service
+
+16. 
 
 -------------------------------------------------------------------------------------------------------------------------------
 
