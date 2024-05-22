@@ -1,6 +1,6 @@
 # AngularJS: commands and features
 
-Summary:
+## Summary:
 
 1. Modules
 
@@ -32,7 +32,17 @@ Summary:
 
 15. Promises with $q Service
 
-16. 
+16. Form Validation
+
+17. Dependency Injection
+
+18. Custom Events
+
+19. Routing with Parameters
+
+20. Custom Decorators
+
+21. Animations
 
 -------------------------------------------------------------------------------------------------------------------------------
 
@@ -249,7 +259,18 @@ app.directive('myDirective', function() {
 });
 ```
 
-Here are some **more advanced features of AngularJS**, along with code snippets for each capability:
+```html
+<!-- Use the custom directive -->
+<div ng-app="myApp">
+  <my-directive></my-directive>
+</div>
+```
+
+These snippets cover the **fundamental features of AngularJS**
+
+Each example illustrates a core concept and provides a base for you to build more complex applications
+
+**Advanced features of AngularJS**, along with code snippets for each capability:
 
 ## 12.  Custom Services
 
@@ -309,8 +330,9 @@ app.filter('reverse', function() {
   <p>Original: {{ message }}</p>
   <p>Reversed: {{ message | reverse }}</p>
 </div>
-javascript
-Copy code
+```
+
+```javascript
 // Define the data in the controller
 app.controller('myController', function($scope) {
   $scope.message = "Hello, World!";
@@ -322,7 +344,6 @@ app.controller('myController', function($scope) {
 Custom directives can have an isolated scope, making them reusable and self-contained components
 
 ```javascript
-Copy code
 // Define a custom directive with isolated scope
 app.directive('myCustomer', function() {
   return {
@@ -445,7 +466,7 @@ app.controller('GreetingController', function($scope, GreetingService) {
 
 ## 18. Custom Events
 
-AngularJS allows communication between controllers through custom events using $emit, $broadcast, and $on
+AngularJS allows communication between controllers through custom events using **$emit**, **$broadcast**, and **$on**
 
 ```javascript
 // Define a controller to emit an event
@@ -475,10 +496,9 @@ app.controller('ChildController', function($scope) {
 
 ## 19. Routing with Parameters
 
-AngularJS routing can handle parameters, making it possible to create dynamic views
+AngularJS routing can handle parameters, making it possible to **create dynamic views**
 
-html
-Copy code
+```html
 <!-- Include the AngularJS route module -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-route.js"></script>
 
@@ -499,15 +519,19 @@ app.controller('UserController', function($scope, $routeParams) {
 
 <!-- Define the view with parameter -->
 <div ng-view></div>
-html
-Copy code
-<!-- user.html -->
-<h1>User ID: {{ userId }}</h1>
-9. Custom Decorators
-Decorators allow you to modify or extend the behavior of services.
+```
 
-javascript
-Copy code
+**user.html**
+
+```html
+<h1>User ID: {{ userId }}</h1>
+```
+
+## 20. Custom Decorators
+
+Decorators allow you to modify or extend the **behavior of services**
+
+```javascript
 // Define a decorator for a service
 app.config(function($provide) {
   $provide.decorator('$log', function($delegate) {
@@ -519,21 +543,26 @@ app.config(function($provide) {
     return $delegate;
   });
 });
-javascript
-Copy code
+```
+
+```javascript
 // Use the decorated service in a controller
 app.controller('LogController', function($scope, $log) {
   $log.log('Hello, World!');
 });
-html
-Copy code
-<!-- HTML to use the controller -->
-<div ng-app="myApp" ng-controller="LogController"></div>
-10. Animations
-AngularJS supports animations via the ngAnimate module.
+```
 
-html
-Copy code
+**HTML to use the controller**
+
+```html
+<div ng-app="myApp" ng-controller="LogController"></div>
+```
+
+## 21. Animations
+
+AngularJS supports animations via the ngAnimate module
+
+```html
 <!-- Include the AngularJS animate module -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-animate.js"></script>
 
@@ -568,17 +597,9 @@ app.controller('AnimateController', function($scope) {
   <button ng-click="show = !show">Toggle</button>
   <div ng-if="show" class="my-animation">Animate me!</div>
 </div>
-These advanced features help you build more sophisticated and powerful applications with AngularJS.
-
-```html
-<!-- Use the custom directive -->
-<div ng-app="myApp">
-  <my-directive></my-directive>
-</div>
 ```
 
-These snippets cover the **fundamental features of AngularJS**
+These advanced features help you build more sophisticated and powerful applications with AngularJS
 
-Each example illustrates a core concept and provides a base for you to build more complex applications
 
 
