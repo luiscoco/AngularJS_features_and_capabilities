@@ -1,16 +1,23 @@
-# AngularJS: features and capabilities
+# AngularJS: commands and features
 
-AngularJS provides a variety of commands and features that help in building dynamic and interactive web applications. Below are some of the core features along with code snippets for each:
+AngularJS provides a variety of **commands** and **features** that help in building dynamic and interactive web applications
 
-1. Modules
-Modules are the basic building blocks of an AngularJS application. They contain different parts of the application such as controllers, services, filters, directives, etc.
+Below are some of the core features along with code snippets for each:
 
-javascript
-Copy code
+## 1. Modules
+
+Modules are the basic building blocks of an AngularJS application
+
+They contain different parts of the application such as controllers, services, filters, directives, etc
+
+```javascript
 // Define a module
 var app = angular.module('myApp', []);
-2. Controllers
-Controllers are JavaScript functions that are used to build the business logic of the application.
+```
+
+## 2. Controllers
+
+Controllers are JavaScript functions that are used to build the business logic of the application
 
 javascript
 Copy code
