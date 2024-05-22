@@ -1,5 +1,33 @@
 # AngularJS: commands and features
 
+Summary:
+
+1. Modules
+
+2. Controllers
+
+3. Directives
+
+4. Services
+
+5. Filter
+
+6. Two-Way Data Binding
+
+7. ng-repeat
+
+8. ng-if
+
+9. ng-click
+
+10. Routing
+
+11. Custom Directives
+
+12. 
+
+-------------------------------------------------------------------------------------------------------------------------------
+
 AngularJS provides a variety of **commands** and **features** that help in building dynamic and interactive web applications
 
 Below are some of the core features along with code snippets for each:
