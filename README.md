@@ -560,7 +560,7 @@ app.controller('LogController', function($scope, $log) {
 
 ## 21. Animations
 
-AngularJS supports animations via the ngAnimate module
+AngularJS supports animations via the **ngAnimate** module
 
 ```html
 <!-- Include the AngularJS animate module -->
