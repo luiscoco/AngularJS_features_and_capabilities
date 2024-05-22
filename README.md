@@ -8,7 +8,7 @@ Below are some of the core features along with code snippets for each:
 
 Modules are the basic building blocks of an AngularJS application
 
-They contain different parts of the application such as controllers, services, filters, directives, etc
+They **contain different parts of the application** such as controllers, services, filters, directives, etc
 
 ```javascript
 // Define a module
@@ -17,7 +17,7 @@ var app = angular.module('myApp', []);
 
 ## 2. Controllers
 
-Controllers are JavaScript functions that are used to build the business logic of the application
+Controllers are JavaScript functions that are used to build the **business logic** of the application
 
 ```javascript
 // Define a controller
@@ -35,7 +35,7 @@ app.controller('myController', function($scope) {
 
 ## 3. Directives
 
-Directives are special tokens in the markup that tell the library to do something to a DOM element (e.g., add behavior to an element)
+Directives are special tokens in the markup that tell the library to **do something to a DOM element** (e.g., add behavior to an element)
 
 ```html
 <!-- ng-model Directive -->
@@ -47,7 +47,7 @@ Directives are special tokens in the markup that tell the library to do somethin
 
 ## 4. Services
 
-Services are singleton objects that are used to organize and share code across your app
+Services are singleton objects that are used to organize and **share code** across your app
 
 ```javascript
 // Define a service
@@ -65,7 +65,7 @@ app.controller('myController', function($scope, myService) {
 
 ## 5. Filters
 
-Filters format the value of an expression for display to the user
+Filters **format** the value of an expression for display to the user
 
 ```html
 <!-- Use a built-in filter -->
@@ -83,7 +83,7 @@ app.controller('myController', function($scope) {
 
 ## 6. Two-Way Data Binding
 
-Two-way data binding is a feature that synchronizes the model and the view
+Two-way data binding is a feature that **synchronizes the model and the view**
 
 ```html
 <!-- Example of two-way data binding -->
@@ -95,7 +95,7 @@ Two-way data binding is a feature that synchronizes the model and the view
 
 ## 7. ng-repeat
 
-The ng-repeat directive repeats a set of HTML for each item in a collection
+The ng-repeat directive **repeats a set of HTML** for each item in a collection
 
 ```html
 <!-- Example of ng-repeat -->
@@ -115,7 +115,7 @@ app.controller('myController', function($scope) {
 
 ## 8. ng-if
 
-The ng-if directive conditionally includes a template based on the value of an expression
+The ng-if directive **conditionally includes a template** based on the value of an expression
 
 ```html
 <!-- Example of ng-if -->
@@ -134,7 +134,7 @@ app.controller('myController', function($scope) {
 
 ## 9. ng-click
 
-The ng-click directive specifies a custom behavior when an element is clicked
+The ng-click directive specifies a **custom behavior when an element is clicked**
 
 ```html
 <!-- Example of ng-click -->
@@ -156,7 +156,7 @@ app.controller('myController', function($scope) {
 
 ## 10. Routing
 
-AngularJS's routing mechanism allows you to create single-page applications with multiple views
+AngularJS's routing mechanism allows you to create **single-page applications with multiple views**
 
 ```html
 <!-- Include the AngularJS route module -->
@@ -186,13 +186,17 @@ app.controller('AboutController', function($scope) {
 
 <!-- Define the views -->
 <div ng-view></div>
+```
+
+**home.html**
 
 ```html
-Copy code
-<!-- home.html -->
 <h1>{{ message }}</h1>
+```
 
-<!-- about.html -->
+**about.html**
+
+```html
 <h1>{{ message }}</h1>
 ```
 
@@ -216,8 +220,8 @@ app.directive('myDirective', function() {
 </div>
 ```
 
-These snippets cover the fundamental features of AngularJS
+These snippets cover the **fundamental features of AngularJS**
 
 Each example illustrates a core concept and provides a base for you to build more complex applications
 
-If you have any specific questions or need further details on any feature, feel free to ask!
+
