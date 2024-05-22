@@ -19,33 +19,37 @@ var app = angular.module('myApp', []);
 
 Controllers are JavaScript functions that are used to build the business logic of the application
 
-javascript
-Copy code
+```javascript
 // Define a controller
 app.controller('myController', function($scope) {
   $scope.message = "Hello, World!";
 });
-html
-Copy code
+```
+
+```html
 <!-- Use the controller in HTML -->
 <div ng-app="myApp" ng-controller="myController">
   {{ message }}
 </div>
-3. Directives
-Directives are special tokens in the markup that tell the library to do something to a DOM element (e.g., add behavior to an element).
+```
 
-html
-Copy code
+## 3. Directives
+
+Directives are special tokens in the markup that tell the library to do something to a DOM element (e.g., add behavior to an element)
+
+```html
 <!-- ng-model Directive -->
 <div ng-app="myApp" ng-controller="myController">
   <input type="text" ng-model="name">
   <p>Hello, {{ name }}!</p>
 </div>
-4. Services
-Services are singleton objects that are used to organize and share code across your app.
+```
 
-javascript
-Copy code
+## 4. Services
+
+Services are singleton objects that are used to organize and share code across your app
+
+```javascript
 // Define a service
 app.service('myService', function() {
   this.sayHello = function() {
@@ -57,76 +61,90 @@ app.service('myService', function() {
 app.controller('myController', function($scope, myService) {
   $scope.greeting = myService.sayHello();
 });
-5. Filters
-Filters format the value of an expression for display to the user.
+```
 
-html
-Copy code
+## 5. Filters
+
+Filters format the value of an expression for display to the user
+
+```html
 <!-- Use a built-in filter -->
 <div ng-app="myApp" ng-controller="myController">
   {{ price | currency }}
 </div>
-javascript
-Copy code
+```
+
+```javascript
 // Define the data in the controller
 app.controller('myController', function($scope) {
   $scope.price = 1234.56;
 });
-6. Two-Way Data Binding
-Two-way data binding is a feature that synchronizes the model and the view.
+```
 
-html
-Copy code
+## 6. Two-Way Data Binding
+
+Two-way data binding is a feature that synchronizes the model and the view
+
+```html
 <!-- Example of two-way data binding -->
 <div ng-app="myApp" ng-controller="myController">
   <input type="text" ng-model="name">
   <p>Hello, {{ name }}!</p>
 </div>
-7. ng-repeat
-The ng-repeat directive repeats a set of HTML for each item in a collection.
+```
 
-html
-Copy code
+## 7. ng-repeat
+
+The ng-repeat directive repeats a set of HTML for each item in a collection
+
+```html
 <!-- Example of ng-repeat -->
 <div ng-app="myApp" ng-controller="myController">
   <ul>
     <li ng-repeat="item in items">{{ item }}</li>
   </ul>
 </div>
-javascript
-Copy code
+```
+
+```javascript
 // Define the items in the controller
 app.controller('myController', function($scope) {
   $scope.items = ['Item 1', 'Item 2', 'Item 3'];
 });
-8. ng-if
-The ng-if directive conditionally includes a template based on the value of an expression.
+```
 
-html
-Copy code
+## 8. ng-if
+
+The ng-if directive conditionally includes a template based on the value of an expression
+
+```html
 <!-- Example of ng-if -->
 <div ng-app="myApp" ng-controller="myController">
   <p ng-if="showMessage">This is a conditional message.</p>
   <button ng-click="showMessage = !showMessage">Toggle Message</button>
 </div>
-javascript
-Copy code
+```
+
+```javascript
 // Define the condition in the controller
 app.controller('myController', function($scope) {
   $scope.showMessage = true;
 });
-9. ng-click
-The ng-click directive specifies a custom behavior when an element is clicked.
+```
 
-html
-Copy code
+## 9. ng-click
+
+The ng-click directive specifies a custom behavior when an element is clicked
+
+```html
 <!-- Example of ng-click -->
 <div ng-app="myApp" ng-controller="myController">
   <button ng-click="incrementCounter()">Click Me!</button>
   <p>Clicked {{ counter }} times.</p>
 </div>
-javascript
-Copy code
+```
+
+```javascript
 // Define the function and counter in the controller
 app.controller('myController', function($scope) {
   $scope.counter = 0;
@@ -134,11 +152,13 @@ app.controller('myController', function($scope) {
     $scope.counter++;
   };
 });
-10. Routing
-AngularJS's routing mechanism allows you to create single-page applications with multiple views.
+```
 
-html
-Copy code
+## 10. Routing
+
+AngularJS's routing mechanism allows you to create single-page applications with multiple views
+
+```html
 <!-- Include the AngularJS route module -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-route.js"></script>
 
@@ -166,28 +186,38 @@ app.controller('AboutController', function($scope) {
 
 <!-- Define the views -->
 <div ng-view></div>
-html
+
+```html
 Copy code
 <!-- home.html -->
 <h1>{{ message }}</h1>
 
 <!-- about.html -->
 <h1>{{ message }}</h1>
-11. Custom Directives
-Custom directives allow you to create your own HTML tags with specific behavior.
+```
 
-javascript
-Copy code
+## 11. Custom Directives
+
+Custom directives allow you to create your own HTML tags with specific behavior
+
+```javascript
 // Define a custom directive
 app.directive('myDirective', function() {
   return {
     template: '<h1>Custom Directive!</h1>'
   };
 });
-html
-Copy code
+```
+
+```html
 <!-- Use the custom directive -->
 <div ng-app="myApp">
   <my-directive></my-directive>
 </div>
-These snippets cover the fundamental features of AngularJS. Each example illustrates a core concept and provides a base for you to build more complex applications. If you have any specific questions or need further details on any feature, feel free to ask!
+```
+
+These snippets cover the fundamental features of AngularJS
+
+Each example illustrates a core concept and provides a base for you to build more complex applications
+
+If you have any specific questions or need further details on any feature, feel free to ask!
